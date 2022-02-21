@@ -1,0 +1,61 @@
+package empleado;
+
+import java.util.Scanner;
+
+public class Empresa {
+    static String mn = ""; //Nomre del mayor --> Edad, salario, antiguedad
+    static double m = 0; // mayor (edad, salario, antiguedad)
+    
+    public static void main(String[] args) {
+        Scanner x = new Scanner(System.in);
+        
+        String dni, c, n, d;
+        int ae, an, aa=2022;
+        double s, b; 
+        
+        System.out.println("Registro");
+        
+        System.out.println("Ingrese el DNI: "); dni = x.next();
+        System.out.println("Ingrese el cargo: "); c = x.next();
+        System.out.println("Ingrese el nombre: "); n = x.next();
+        System.out.println("Ingrese la dirección: "); d = x.next();
+        
+        System.out.println("Ingrese el año de entrada: "); ae = x.nextInt();
+        System.out.println("Ingrese el año de nacimiento: "); an = x.nextInt();
+        
+        System.out.println("Ingrese el sueldo basico: "); s = x.nextDouble();
+        System.out.println("Ingrese el porcentaje de bonificación: "); b = x.nextDouble();
+        
+        Empleado e1 = new Empleado(dni, c, n, d, ae, an, s, b);
+        
+        System.out.println("Registro");
+        
+        System.out.println("Ingrese el DNI: "); dni = x.next();
+        System.out.println("Ingrese el cargo: "); c = x.next();
+        System.out.println("Ingrese el nombre: "); n = x.next();
+        System.out.println("Ingrese la dirección: "); d = x.next();
+        
+        System.out.println("Ingrese el año de entrada: "); ae = x.nextInt();
+        System.out.println("Ingrese el año de nacimiento: "); an = x.nextInt();
+        
+        System.out.println("Ingrese el sueldo basico: "); s = x.nextDouble();
+        System.out.println("Ingrese el porcentaje de bonificación: "); b = x.nextDouble();
+        
+        Empleado e2 = new Empleado(dni, c, n, d, ae, an, s, b);
+        
+        System.out.println("Registro");
+        
+        System.out.println("Ingrese el DNI: "); dni = x.next();
+        System.out.println("Ingrese el cargo: "); c = x.next();
+        System.out.println("Ingrese el nombre: "); n = x.next();
+        System.out.println("Ingrese la dirección: "); d = x.next();
+        
+        System.out.println("Ingrese el año de entrada: "); ae = x.nextInt();
+        System.out.println("Ingrese el año de nacimiento: "); an = x.nextInt();
+        
+        System.out.println("Ingrese el sueldo basico: "); s = x.nextDouble();
+        System.out.println("Ingrese el porcentaje de bonificación: "); b = x.nextDouble();
+        
+        Empleado e3 = new Empleado(dni, c, n, d, ae, an, s, b);
+    }
+}
