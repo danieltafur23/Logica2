@@ -1,0 +1,100 @@
+package empleado;
+
+//DNI, Cargo, Nombre, Direccion, Año entrada, Año Nacimiento, Sueldo basico, Porcentaje de bonificaciones
+//Metodos: Calcular antiguedad, calcular edad, calcular sueldo con bonificaciones
+
+public class Empleado {
+    
+    private String dni, nombre,cargo, direccion; 
+    private int anoEntrada, anoNacimiento;
+    private double sueldo, bonificacion;
+    
+    
+    public Empleado (String n,String dni,String c, String d, int ae, int an, double s, double b){
+        nombre = n;
+        this.dni = dni;
+        this.cargo = c;
+        this.direccion = d;
+        this.anoEntrada = ae;
+        this.anoNacimiento = an;
+        this.sueldo = s;
+        this.bonificacion = b;
+    }
+    
+    public String getDni() {
+        return dni;
+    }
+    
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+    
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+    
+    public String getCargo() {
+        return cargo;
+    }
+    
+    public void setCargo(String cargo) {
+        this.cargo = cargo;
+    }
+    
+    public String getDireccion() {
+        return direccion;
+    }
+    
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+    
+    public int getAnoEntrada() {
+        return anoEntrada;
+    }
+
+    public void setAnoEntrada(int anoEntrada) {
+        this.anoEntrada = anoEntrada;
+    }
+    
+    public int getAnoNacimiento() {
+        return anoNacimiento;
+    }
+  
+    public void setAnoNacimiento(int anoNacimiento) {
+        this.anoNacimiento = anoNacimiento;
+    }
+    
+    public double getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    public double getBonificacion() {
+        return bonificacion;
+    }
+
+    public void setBonificacion(double bonificacion) {
+        this.bonificacion = bonificacion;
+    }
+    
+    public int calcularAntiguedad(int a){
+        return a-anoEntrada;
+    }
+    
+    public int calcularEdad(int a){
+        return a-anoNacimiento;
+    }
+    
+    public double calcularSueldoConBonificaciones(){
+        return sueldo+sueldo*bonificacion/100;
+    }
+    
+}
